@@ -4,7 +4,7 @@
 
 Use Jadx to decompile the APK and read the code. After some reading on the *MainActivity* and *MainActivityKt* there is a function named *performslowDecryption* that is called when the app opens.
 
-That function try to decrypt the flag using a slow function that tries to calculate the 150th fibonacci to use as key for the decryption.
+That function try to decrypt the flag calling the *slowRecursive* functiont that tries to calculate the 150th fibonacci to use as key for the decryption.
 
 Reading the *xorDecrypt* function, it just do a simple XOR with the encrypted flag an the key. Using CyberChef to decode the flag that was in base64 and using the key with XOR function, the decrypted flag is found:
 
